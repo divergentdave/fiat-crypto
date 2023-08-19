@@ -32,12 +32,14 @@ pub struct fiat_p224_montgomery_domain_field_element(pub [u64; 4]);
 
 impl std::ops::Index<usize> for fiat_p224_montgomery_domain_field_element {
     type Output = u64;
+    #[inline]
     fn index(&self, index: usize) -> &Self::Output {
         &self.0[index]
     }
 }
 
 impl std::ops::IndexMut<usize> for fiat_p224_montgomery_domain_field_element {
+    #[inline]
     fn index_mut(&mut self, index: usize) -> &mut Self::Output {
         &mut self.0[index]
     }
@@ -50,12 +52,14 @@ pub struct fiat_p224_non_montgomery_domain_field_element(pub [u64; 4]);
 
 impl std::ops::Index<usize> for fiat_p224_non_montgomery_domain_field_element {
     type Output = u64;
+    #[inline]
     fn index(&self, index: usize) -> &Self::Output {
         &self.0[index]
     }
 }
 
 impl std::ops::IndexMut<usize> for fiat_p224_non_montgomery_domain_field_element {
+    #[inline]
     fn index_mut(&mut self, index: usize) -> &mut Self::Output {
         &mut self.0[index]
     }

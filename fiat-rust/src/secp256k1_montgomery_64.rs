@@ -32,12 +32,14 @@ pub struct fiat_secp256k1_montgomery_montgomery_domain_field_element(pub [u64; 4
 
 impl std::ops::Index<usize> for fiat_secp256k1_montgomery_montgomery_domain_field_element {
     type Output = u64;
+    #[inline]
     fn index(&self, index: usize) -> &Self::Output {
         &self.0[index]
     }
 }
 
 impl std::ops::IndexMut<usize> for fiat_secp256k1_montgomery_montgomery_domain_field_element {
+    #[inline]
     fn index_mut(&mut self, index: usize) -> &mut Self::Output {
         &mut self.0[index]
     }
@@ -50,12 +52,14 @@ pub struct fiat_secp256k1_montgomery_non_montgomery_domain_field_element(pub [u6
 
 impl std::ops::Index<usize> for fiat_secp256k1_montgomery_non_montgomery_domain_field_element {
     type Output = u64;
+    #[inline]
     fn index(&self, index: usize) -> &Self::Output {
         &self.0[index]
     }
 }
 
 impl std::ops::IndexMut<usize> for fiat_secp256k1_montgomery_non_montgomery_domain_field_element {
+    #[inline]
     fn index_mut(&mut self, index: usize) -> &mut Self::Output {
         &mut self.0[index]
     }
